@@ -14,12 +14,16 @@ struct FavouriteListItem {
     let myRating: Double
     let description: String
     
-//    var starsRating: String {
-//        
-//    }
+    var starsRatingString: String {
+        "Рейтинг: " + Array(repeating: "⭐️", count: Int(myRating)).joined()
+    }
     
     var roundedPriceString: String? {
         guard let price = self.price else { return nil }
         return String(format: "%.2f руб.", price)
+    }
+    
+    var image: UIImage? {
+        UIImage(named: imageName)
     }
 }

@@ -9,20 +9,33 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet var detailImageView: UIImageView!
+    @IBOutlet var detailTitleLabel: UILabel!
+    @IBOutlet var detailPriceLabel: UILabel!
+    @IBOutlet var detailRatingLabel: UILabel!
+    @IBOutlet var detailDescriptionLabel: UILabel!
+    
+    var item: FavouriteListItem? {
+        didSet { setupUI() }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupUI() {
+        loadViewIfNeeded()
+        detailImageView.image = item?.image
+        detailTitleLabel.text = item?.title
+        detailPriceLabel.text = item?.roundedPriceString
+        detailRatingLabel.text = item?.starsRatingString
+        detailDescriptionLabel.text = item?.description
     }
-    */
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        detailImageView.layer.cornerRadius = detailImageView.bounds.height / 2
+    }
+}
 
+extension DetailViewController: CellSelectableDelegate {
+    func didSelect(item: FavouriteListItem) {
+        self.item = item
+    }
 }
