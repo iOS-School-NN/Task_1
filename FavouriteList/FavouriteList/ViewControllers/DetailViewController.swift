@@ -19,6 +19,12 @@ class DetailViewController: UIViewController {
         didSet { setupUI() }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        detailImageView.layer.cornerRadius = detailImageView.bounds.height / 2
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
     private func setupUI() {
         loadViewIfNeeded()
         detailImageView.image = item?.image
@@ -26,11 +32,8 @@ class DetailViewController: UIViewController {
         detailPriceLabel.text = item?.roundedPriceString
         detailRatingLabel.text = item?.starsRatingString
         detailDescriptionLabel.text = item?.description
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        detailImageView.layer.cornerRadius = detailImageView.bounds.height / 2
+        
+        detailPriceLabel.isHidden = item?.price == nil
     }
 }
 

@@ -23,6 +23,6 @@ class FavouriteListCell: UITableViewCell {
         cellImageView.image = item.image
         cellTitleLabel.text = item.title
         cellPriceLabel.text = item.roundedPriceString
-        cellPriceLabel.isHidden = item.roundedPriceString == nil
+        cellPriceLabel.isHidden = item.price == nil
     }
 }

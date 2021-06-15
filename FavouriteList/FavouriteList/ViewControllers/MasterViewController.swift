@@ -15,9 +15,9 @@ class MasterViewController: UITableViewController {
     
     weak var delegate: CellSelectableDelegate?
     var favouriteListData = [FavouriteListItem]()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         configureData()
     }
     
@@ -39,6 +39,9 @@ class MasterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.didSelect(item: favouriteListData[indexPath.row])
+        if let detailVC = delegate as? DetailViewController {
+            splitViewController?.showDetailViewController(detailVC, sender: nil)
+        }
     }
     
     private func configureData() {
