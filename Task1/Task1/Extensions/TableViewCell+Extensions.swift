@@ -8,8 +8,7 @@
 import UIKit
 
 extension UITableViewCell {
-    
-    public static func createForTableView(_ tableView: UITableView) -> UITableViewCell? {
+    static func createForTableView(_ tableView: UITableView) -> UITableViewCell? {
         let className = String(describing:self)
         
         var cell: UITableViewCell? = nil
@@ -25,4 +24,3 @@ extension UITableViewCell {
         return cell
     }
 }
-

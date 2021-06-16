@@ -44,7 +44,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         iconView.contentMode = .scaleAspectFill
-        iconView.layer.cornerRadius = (iconView?.frame.size.width ?? 0.0) / 2
+        iconView.layer.cornerRadius = iconView.frame.size.width / 2
         iconView.clipsToBounds = true
     }
     
@@ -65,7 +65,7 @@ class DetailViewController: UIViewController {
         
         priceLabel.textColor = .systemGray
         priceLabel.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-       
+        
         if let price = detailItem?.price {
             priceLabel.text = String(format: "%.2f$", price)
             priceLabel.isHidden = false

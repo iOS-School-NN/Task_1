@@ -15,12 +15,6 @@ class FilmTableViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     
-    // MARK: - Lifecycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     // MARK: - Configure
     
     func configure(_ iconName: UIImage, _ title: String, _ price: Double? = nil) {
@@ -38,12 +32,10 @@ class FilmTableViewCell: UITableViewCell {
     
         iconView.image = iconName
         iconView.contentMode = .scaleAspectFill
-        iconView.layer.cornerRadius = (iconView?.frame.size.width ?? 0.0) / 2
+        iconView.layer.cornerRadius = iconView.frame.size.width / 2
         iconView.clipsToBounds = true
         
         titleLabel.text = title
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        
-        
     }
 }

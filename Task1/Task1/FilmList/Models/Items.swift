@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct Items {
-    
     var iconName: UIImage
     var title: String
     var price: Double?
