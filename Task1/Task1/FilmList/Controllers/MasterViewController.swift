@@ -18,7 +18,7 @@ class MasterViewController: UIViewController {
     
     private var selectedItem: Items?
     private var filmItems: [Items] = [
-        Items(iconName: Asset.shawshank.image, title: L10n.shawshank, price: 100, descr: L10n.shawshankDescr, rating: 0.7),
+        Items(iconName: Asset.shawshank.image, title: L10n.shawshank, price: 100, descr: L10n.shawshankDescr, rating: 8.7),
         Items(iconName: Asset.mile.image, title: L10n.mile, price: 200.5352828, descr: L10n.mileDescr, rating: 2.44),
         Items(iconName: Asset.interstellar.image, title: L10n.interstellar, price: 300.099888, descr: L10n.interstellarDesr, rating: 3.6),
         Items(iconName: Asset.forrest.image, title: L10n.forrest, price: 400.54677, descr: L10n.forrestDescr, rating: 4.7),
