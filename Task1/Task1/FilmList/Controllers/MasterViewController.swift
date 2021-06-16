@@ -61,7 +61,7 @@ extension MasterViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = FavouriteTableViewCell.createForTableView(tableView) as! FavouriteTableViewCell
+        let cell = FilmTableViewCell.createForTableView(tableView) as! FilmTableViewCell
         let item = filmItems[indexPath.row]
         cell.configure(item.iconName, item.title, item.price)
         return cell

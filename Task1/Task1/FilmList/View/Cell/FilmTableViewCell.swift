@@ -1,5 +1,5 @@
 //
-//  FavouriteTableViewCell.swift
+//  FilmTableViewCell.swift
 //  Task1
 //
 //  Created by Mary Matichina on 13.06.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavouriteTableViewCell: UITableViewCell {
+class FilmTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     
