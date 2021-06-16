@@ -9,6 +9,7 @@ import UIKit
 
 class DetailVC: UIViewController {
     
+    @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var ratingLable: UILabel!
@@ -43,7 +44,7 @@ class DetailVC: UIViewController {
         imageView.layer.cornerRadius = imageView.bounds.height / 2
         
         if priceVal == nil {
-            descriptionLable.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 40).isActive = true
+            scroll.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 40).isActive = true
         }
     }
     
