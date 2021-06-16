@@ -18,7 +18,6 @@ class MovieTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        //layoutIfNeeded()
         cellImage.layer.cornerRadius = cellImage.bounds.height / 2
     }
     
