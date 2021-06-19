@@ -10,6 +10,7 @@ import UIKit
 class MasterViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
+    
     private let itemTableViewIdentifier = "itemCell"
     private let detailNavigationIdentifier = "detailNavigation"
     
@@ -28,22 +29,19 @@ extension MasterViewController {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: String(describing: ItemMasterTableViewCell.self), bundle: nil), forCellReuseIdentifier: itemTableViewIdentifier)
+        tableView.register(UINib(nibName: String(describing: MasterTableViewItemCell.self), bundle: nil), forCellReuseIdentifier: itemTableViewIdentifier)
         tableView.reloadData()
     }
+    
 }
 
 extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 89
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return masterModel.getCountOfFilms()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: itemTableViewIdentifier) as? ItemMasterTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: itemTableViewIdentifier) as? MasterTableViewItemCell else {
             return UITableViewCell()
         }
         cell.configure(masterModel.getDataBy(index: indexPath.row))

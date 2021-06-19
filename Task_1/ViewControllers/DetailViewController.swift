@@ -21,11 +21,11 @@ class DetailViewController: UIViewController {
         viewModel.configure(item)
     }
     
-    private func settingInformation() {
+    private func settingTheInformation() {
         detailImageView.image = UIImage(named: viewModel.imageName)
         detailTitleLabel.text = viewModel.title
         detailRatingLabel.text = String(viewModel.myRating)
-        if (viewModel.price != "No price") {
+        if (viewModel.price != "Price: is empty") {
             detailPriceLabel.text = viewModel.price
         }
         else {
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingInformation()
+        settingTheInformation()
     }
     
     override func viewDidLayoutSubviews() {

@@ -13,15 +13,5 @@ struct ItemModel {
     let price: Double? // Цена
     let myRating: Double // Оценка от 1 до 5
     let description: String // Описание (не менее 15 символов)
-    
-    var formattedPrice: String? {
-        guard let checkedPrice = price else {
-            return nil
-        }
-        return String(format: "$%.02f", checkedPrice)
-    }    
-    var formattedMyRating: String {
-        return "Рейтинг: " + String(format: "%.01f ★", myRating)
-    }
-    
+
 }

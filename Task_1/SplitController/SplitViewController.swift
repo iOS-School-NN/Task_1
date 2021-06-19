@@ -10,6 +10,7 @@ import UIKit
 class SplitViewController: UISplitViewController, UISplitViewControllerDelegate {
     private let detailNavigationIdentifier = "detailNavigation"
     private let masterModel = MasterViewModel()
+    
     private func showDefaultInformation() {
         guard
             let navigationDetailController = storyboard?.instantiateViewController(identifier: detailNavigationIdentifier) as? UINavigationController,
