@@ -16,7 +16,7 @@ final class DetailViewModel {
         guard let checkedPrice = item?.price else {
             return "Price: is empty"
         }
-        return String(format: "$%.02f", checkedPrice)
+        return "Price: " + String(format: "$%.02f", checkedPrice)
     }
     var myRating: String {
         let minCountOfStars = 0
@@ -28,10 +28,10 @@ final class DetailViewModel {
         
         let roundMyRating = Int(checkedMyRating)
         if (roundMyRating >= maxCountOfStars) {
-           return "★★★★★"
+           return "Rating: ★★★★★"
         }
         if (roundMyRating <= minCountOfStars) {
-            return "☆☆☆☆☆"
+            return "Rating: ☆☆☆☆☆"
         }
         
         var formatedRating: String = ""
@@ -43,10 +43,10 @@ final class DetailViewModel {
                 formatedRating.append("☆")
             }
         }
-        return formatedRating
+        return "Rating: " + formatedRating
     }
     
-    var description: String { return "Description: " + (item?.description ?? "is empty") }
+    var description: String { return item?.description ?? "is empty" }
     
     func configure(_ item: ItemModel) {
         self.item = item

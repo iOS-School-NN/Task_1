@@ -13,12 +13,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailTitleLabel: UILabel!
     @IBOutlet weak var detailRatingLabel: UILabel!
     @IBOutlet weak var detailPriceLabel: UILabel!
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var detailDescriptionTextView: UITextView!
     
     private let viewModel = DetailViewModel()
     
     func configure(item: ItemModel) {
         viewModel.configure(item)
+    }
+    
+    private func settingTextView() {
+        detailDescriptionTextView.layer.borderWidth = 0.5
+        detailDescriptionTextView.layer.borderColor = UIColor.systemGray4.cgColor
+        detailDescriptionTextView.layer.cornerRadius = 5.0
+        detailDescriptionTextView.isSelectable = false
     }
     
     private func settingTheInformation() {
@@ -31,7 +38,8 @@ class DetailViewController: UIViewController {
         else {
             detailPriceLabel.isHidden = true
         }
-        detailDescriptionLabel.text = viewModel.description
+        detailDescriptionTextView.text = viewModel.description
+        settingTextView()
     }
     
     override func viewDidLoad() {

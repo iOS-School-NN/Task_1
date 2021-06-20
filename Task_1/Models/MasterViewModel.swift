@@ -9,12 +9,12 @@ import Foundation
 
 final class MasterViewModel {
     private let filmsData: [ItemModel] = [
-        ItemModel(title: "Inception", imageName: "Inception", price: 10.838, myRating: 4.38, description: "шпионаж фантастического уровня. С помощью сверхтехнологии герой Ди Каприо и его команда проникают в чужие сны."),
-        ItemModel(title: "Green Mile", imageName: "GreenMile", price: nil, myRating: 4.5, description: "в тюрьме для смертников появляется заключенный с божественным даром. Мистическая драма по роману Стивена Кинга."),
-        ItemModel(title: "Cloud Atlas", imageName: "CloudAtlas", price: 14, myRating: 5.0, description: "Шесть историй - пять реинкарнаций, происходящих в разное время, тесно переплетаются между собой..."),
-        ItemModel(title: "Tenet", imageName: "Tenet", price: 13.43, myRating: 3.27, description: "протагонист пытается обезвредить террориста с помощью уникальной технологии. Блокбастер-пазл Кристофера Нолана."),
-        ItemModel(title: "The Gentlemen", imageName: "TheGentlemen", price: 12.89, myRating: 3.815, description: "успешное возвращение Гая Ричи к корням — острая и живая криминальная комедия с блестящим актерским составом."),
-        ItemModel(title: "The Matrix", imageName: "Matrix", price: 11.02, myRating: 4.19, description: "хакер Нео узнает, что его мир — виртуальный. Выдающийся экшен, доказавший, что зрелищное кино может быть умным.")
+        ItemModel(title: "Inception", imageName: "Inception", price: 10.838, myRating: 4.38, description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."),
+        ItemModel(title: "Green Mile", imageName: "GreenMile", price: nil, myRating: 4.5, description: "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift."),
+        ItemModel(title: "Cloud Atlas", imageName: "CloudAtlas", price: 14, myRating: 5.0, description: "An exploration of how the actions of individual lives impact one another in the past, present and future, as one soul is shaped from a killer into a hero, and an act of kindness ripples across centuries to inspire a revolution."),
+        ItemModel(title: "Tenet", imageName: "Tenet", price: 13.43, myRating: 3.27, description: "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time."),
+        ItemModel(title: "The Gentlemen", imageName: "TheGentlemen", price: 12.89, myRating: 3.815, description: "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him."),
+        ItemModel(title: "The Matrix (1999)", imageName: "Matrix", price: 11.02, myRating: 4.19, description: "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth - the life he knows is the elaborate deception of an evil cyber-intelligence.")
     ]
     
     func getDataBy(index: Int) -> ItemModel {
