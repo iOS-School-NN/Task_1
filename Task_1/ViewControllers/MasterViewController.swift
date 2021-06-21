@@ -29,7 +29,7 @@ extension MasterViewController {
     func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: String(describing: MasterTableViewItemCell.self), bundle: nil), forCellReuseIdentifier: itemTableViewIdentifier)
+        tableView.register(UINib(nibName: String(describing: MasterItemTableViewCell.self), bundle: nil), forCellReuseIdentifier: itemTableViewIdentifier)
         tableView.reloadData()
     }
     
@@ -41,7 +41,7 @@ extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: itemTableViewIdentifier) as? MasterTableViewItemCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: itemTableViewIdentifier) as? MasterItemTableViewCell else {
             return UITableViewCell()
         }
         cell.configure(masterModel.getDataBy(index: indexPath.row))

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MasterViewModel {
+struct MasterViewModel {
     private let filmsData: [ItemModel] = [
         ItemModel(title: "Inception", imageName: "Inception", price: 10.838, myRating: 4.38, description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."),
         ItemModel(title: "Green Mile", imageName: "GreenMile", price: nil, myRating: 4.5, description: "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift."),

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MasterTableViewItemCell: UITableViewCell {
+class MasterItemTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var itemImageView: UIImageView!
     @IBOutlet private weak var itemTitleLabel: UILabel!
@@ -19,8 +19,9 @@ class MasterTableViewItemCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        itemImageView.layer.cornerRadius = itemImageView.frame.width / 6
     }
     
     func configure(_ item: ItemModel) {
@@ -33,7 +34,6 @@ class MasterTableViewItemCell: UITableViewCell {
         else {
             itemPriceLabel.isHidden = true
         }
-        itemImageView.layer.cornerRadius = itemImageView.frame.width / 6
     }
     
 }
