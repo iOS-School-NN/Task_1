@@ -8,14 +8,14 @@
 import UIKit
 import DeviceKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet private weak var iconView: UIImageView!
+    @IBOutlet private weak var photoView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
-    @IBOutlet private weak var descrText: UITextView!
+    @IBOutlet private weak var descriptionText: UITextView!
     @IBOutlet private weak var ratingLabel: UILabel!
     @IBOutlet private weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var hightConstraint: NSLayoutConstraint!
@@ -23,12 +23,13 @@ class DetailViewController: UIViewController {
     
     // MARK: Properties
     
-    var detailItem: Items?
+    var detailItem: Item?
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
         configure()
         
         if Device.current.diagonal == 4.0 {
@@ -43,9 +44,10 @@ class DetailViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        iconView.contentMode = .scaleAspectFill
-        iconView.layer.cornerRadius = iconView.frame.size.width / 2
-        iconView.clipsToBounds = true
+        super.viewDidLayoutSubviews()
+        photoView.contentMode = .scaleAspectFill
+        photoView.layer.cornerRadius = photoView.frame.size.width / 2
+        photoView.clipsToBounds = true
     }
     
     private func configureNavBar() {
@@ -54,26 +56,30 @@ class DetailViewController: UIViewController {
     
     // MARK: - Configure
     
-    private func configure() {
-        iconView.image = detailItem?.iconName
+    private func configureView() {
+        photoView.image = detailItem?.photoName
         
         titleLabel.text = detailItem?.title
         titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         
-        descrText.text = detailItem?.descr
-        descrText.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        descriptionText.text = detailItem?.description
+        descriptionText.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         
         priceLabel.textColor = .systemGray
         priceLabel.font = UIFont.systemFont(ofSize: 13, weight: .medium)
         
+        ratingLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+    }
+    
+    private func configure() {
+        
         if let price = detailItem?.price {
             priceLabel.text = String(format: "%.2f$", price)
-            priceLabel.isHidden = false
         } else {
-            priceLabel.text = ""
-            priceLabel.isHidden = true
             heightConstraint.constant = 0
         }
+        
+        priceLabel.isHidden = detailItem?.price == nil
         
         if let rating = detailItem?.rating {
             var ratingString = L10n.rating + " "
@@ -82,7 +88,6 @@ class DetailViewController: UIViewController {
             }
             ratingLabel.text = ratingString
             ratingLabel.isHidden = rating < 1
-            ratingLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         }
     }
 }

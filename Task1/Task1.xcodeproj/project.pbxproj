@@ -15,7 +15,7 @@
 		442308EC2676082200E72609 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442308EA2676082200E72609 /* FilmTableViewCell.xib */; };
 		444DCBB426761A9400C0AEE4 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DCBB326761A9400C0AEE4 /* Assets.swift */; };
 		444DCBB626761AE500C0AEE4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DCBB526761AE500C0AEE4 /* Strings.swift */; };
-		444DD06E26775E8000969C08 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DD06D26775E8000969C08 /* Items.swift */; };
+		444DD06E26775E8000969C08 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DD06D26775E8000969C08 /* Item.swift */; };
 		44E6F7CA2675F1DA0001860D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E6F7C92675F1DA0001860D /* AppDelegate.swift */; };
 		44E6F7CE2675F1DA0001860D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E6F7CD2675F1DA0001860D /* MasterViewController.swift */; };
 		44E6F7D12675F1DA0001860D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E6F7CF2675F1DA0001860D /* Main.storyboard */; };
@@ -34,7 +34,7 @@
 		442308ED26760F7800E72609 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		444DCBB326761A9400C0AEE4 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		444DCBB526761AE500C0AEE4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		444DD06D26775E8000969C08 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		444DD06D26775E8000969C08 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		44E6F7C62675F1DA0001860D /* Task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E6F7C92675F1DA0001860D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E6F7CD2675F1DA0001860D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		444DD06C26775E7300969C08 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				444DD06D26775E8000969C08 /* Items.swift */,
+				444DD06D26775E8000969C08 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,7 +319,7 @@
 				44E6F7CE2675F1DA0001860D /* MasterViewController.swift in Sources */,
 				444DCBB426761A9400C0AEE4 /* Assets.swift in Sources */,
 				44E6F7CA2675F1DA0001860D /* AppDelegate.swift in Sources */,
-				444DD06E26775E8000969C08 /* Items.swift in Sources */,
+				444DD06E26775E8000969C08 /* Item.swift in Sources */,
 				442308EB2676082200E72609 /* FilmTableViewCell.swift in Sources */,
 				441EC88B2677F317006ABC09 /* SplitViewController.swift in Sources */,
 				442308E3267606AD00E72609 /* TableViewCell+Extensions.swift in Sources */,

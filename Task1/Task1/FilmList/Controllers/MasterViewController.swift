@@ -8,7 +8,7 @@
 import UIKit
 import DeviceKit
 
-class MasterViewController: UIViewController {
+final class MasterViewController: UIViewController {
     
     // MARK: - Outlets
     
@@ -16,13 +16,13 @@ class MasterViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var selectedItem: Items?
-    private var filmItems: [Items] = [
-        Items(iconName: Asset.shawshank.image, title: L10n.shawshank, price: 100, descr: L10n.shawshankDescr, rating: 8.7),
-        Items(iconName: Asset.mile.image, title: L10n.mile, price: 200.5352828, descr: L10n.mileDescr, rating: 2.44),
-        Items(iconName: Asset.interstellar.image, title: L10n.interstellar, price: 300.099888, descr: L10n.interstellarDesr, rating: 3.6),
-        Items(iconName: Asset.forrest.image, title: L10n.forrest, price: 400.54677, descr: L10n.forrestDescr, rating: 4.7),
-        Items(iconName: Asset.king.image, title: L10n.king, price: nil, descr: L10n.kingDescr, rating: 5.5)
+    private var selectedItem: Item?
+    private var filmItems: [Item] = [
+        Item(photoName: Asset.shawshank.image, title: L10n.shawshank, price: 100, description: L10n.shawshankDescr, rating: 8.7),
+        Item(photoName: Asset.mile.image, title: L10n.mile, price: 200.5352828, description: L10n.mileDescr, rating: 2.44),
+        Item(photoName: Asset.interstellar.image, title: L10n.interstellar, price: 300.099888, description: L10n.interstellarDesr, rating: 3.6),
+        Item(photoName: Asset.forrest.image, title: L10n.forrest, price: 400.54677, description: L10n.forrestDescr, rating: 4.7),
+        Item(photoName: Asset.king.image, title: L10n.king, price: nil, description: L10n.kingDescr, rating: 5.5)
     ]
     
     // MARK: - Lifecycle
@@ -62,9 +62,13 @@ extension MasterViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = FilmTableViewCell.createForTableView(tableView) as! FilmTableViewCell
-        let item = filmItems[indexPath.row]
-        cell.configure(item.iconName, item.title, item.price)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let filmCell = cell as? FilmTableViewCell else { return }
+        let item = filmItems[indexPath.row]
+        filmCell.configureCell(item.photoName, item.title, item.price)
     }
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="icp-QM-rFR">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="8er-dA-yRQ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ekE-Ue-lcB">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,11 +29,11 @@
             <objects>
                 <viewController id="5NH-GR-yPQ" customClass="MasterViewController" customModule="Task1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LlP-bl-slf">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-IU-wfb">
-                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5NH-GR-yPQ" id="aXQ-Z2-ABf"/>
@@ -77,11 +77,11 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="1SK-Wo-vMO" customClass="DetailViewController" customModule="Task1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="94J-mf-aiT">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQA-R2-LU9">
-                                <rect key="frame" x="70" y="110" width="250" height="250"/>
+                                <rect key="frame" x="82" y="110" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="6YH-Qv-ONR"/>
                                     <constraint firstAttribute="width" constant="150" id="DxQ-33-mJT"/>
@@ -130,25 +130,25 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rr6-h1-3rU">
-                                <rect key="frame" x="326.66666666666669" y="390" width="41.333333333333314" height="20.333333333333314"/>
+                                <rect key="frame" x="350.5" y="390" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAy-ph-75b">
-                                <rect key="frame" x="22" y="440.33333333333331" width="346" height="20.333333333333314"/>
+                                <rect key="frame" x="22" y="440.5" width="370" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRQ-TD-CIh">
-                                <rect key="frame" x="22.000000000000004" y="390" width="41.333333333333343" height="20.333333333333314"/>
+                                <rect key="frame" x="22" y="390" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ku0-25-Tvt">
-                                <rect key="frame" x="20" y="490.66666666666674" width="350" height="297.33333333333326"/>
+                                <rect key="frame" x="20" y="491" width="374" height="349"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -177,10 +177,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="qYx-Qt-XTg"/>
                     <connections>
-                        <outlet property="descrText" destination="Ku0-25-Tvt" id="Emt-pB-hOd"/>
+                        <outlet property="descriptionText" destination="Ku0-25-Tvt" id="Emt-pB-hOd"/>
                         <outlet property="heightConstraint" destination="HAH-P4-8Ra" id="kQC-rw-cEu"/>
                         <outlet property="hightConstraint" destination="Lec-L8-bFA" id="xhf-Da-V6b"/>
-                        <outlet property="iconView" destination="aQA-R2-LU9" id="SEd-fp-k3X"/>
+                        <outlet property="photoView" destination="aQA-R2-LU9" id="SEd-fp-k3X"/>
                         <outlet property="priceLabel" destination="BAy-ph-75b" id="sbH-dR-LMC"/>
                         <outlet property="ratingLabel" destination="Rr6-h1-3rU" id="0ww-6m-Qma"/>
                         <outlet property="titleLabel" destination="KRQ-TD-CIh" id="Ftb-y1-1dn"/>

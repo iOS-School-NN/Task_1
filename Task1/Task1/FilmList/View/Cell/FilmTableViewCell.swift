@@ -7,35 +7,39 @@
 
 import UIKit
 
-class FilmTableViewCell: UITableViewCell {
+final class FilmTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     
-    @IBOutlet private weak var iconView: UIImageView!
+    @IBOutlet private weak var photoView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configure()
+    }
+    
     // MARK: - Configure
     
-    func configure(_ iconName: UIImage, _ title: String, _ price: Double? = nil) {
+   private func configure() {
+        priceLabel.textColor = .systemGray
+        priceLabel.font = UIFont.systemFont(ofSize: 13, weight: .medium)
+        
+        photoView.contentMode = .scaleAspectFill
+        photoView.layer.cornerRadius = photoView.frame.size.width / 2
+        photoView.clipsToBounds = true
+        
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+    }
+    
+    func configureCell(_ iconName: UIImage, _ title: String, _ price: Double? = nil) {
         
         if let price = price {
             priceLabel.text = String(format: "%.2f$", price)
-            priceLabel.isHidden = false
-        } else {
-            priceLabel.text = ""
-            priceLabel.isHidden = true
         }
-        
-        priceLabel.textColor = .systemGray
-        priceLabel.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-    
-        iconView.image = iconName
-        iconView.contentMode = .scaleAspectFill
-        iconView.layer.cornerRadius = iconView.frame.size.width / 2
-        iconView.clipsToBounds = true
-        
+        priceLabel.isHidden = price == nil
+        photoView.image = iconName
         titleLabel.text = title
-        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .medium)
     }
 }
