@@ -1,0 +1,20 @@
+PODS:
+  - DeviceKit (4.4.0)
+  - SwiftGen (6.4.0)
+
+DEPENDENCIES:
+  - DeviceKit (~> 4.0)
+  - SwiftGen (~> 6.0)
+
+SPEC REPOS:
+  trunk:
+    - DeviceKit
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  DeviceKit: 2c5d7485a2fa10b65c0091b2952d30843a6ba06d
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+
+PODFILE CHECKSUM: 769fe3851253c40db33cff38c55e80130852e33b
+
+COCOAPODS: 1.10.1
