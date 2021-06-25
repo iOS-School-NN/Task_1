@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--DetailVC-->
+        <!--Detail View Controller-->
         <scene sceneID="VsY-oJ-9oR">
             <objects>
-                <viewController storyboardIdentifier="DetailVC" id="D5e-IJ-WJT" customClass="DetailVC" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D5e-IJ-WJT" customClass="DetailViewController" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dkz-iA-S4V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUG-T2-wUf">
-                                <rect key="frame" x="40" y="400" width="150" height="20.5"/>
+                                <rect key="frame" x="40" y="348" width="150" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Vdm-d2-Bmp">
                                         <variation key="heightClass=compact-widthClass=regular" constant="200"/>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fi0-jr-2to">
-                                <rect key="frame" x="107" y="170" width="200" height="200"/>
+                                <rect key="frame" x="107" y="118" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="cgu-jw-qL4">
                                         <variation key="heightClass=compact-widthClass=compact" constant="70"/>
@@ -40,19 +40,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmb-GF-TVl">
-                                <rect key="frame" x="325" y="400" width="49" height="20.5"/>
+                                <rect key="frame" x="325" y="348" width="49" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Biz-dQ-KC5">
-                                <rect key="frame" x="40" y="450.5" width="39" height="20.5"/>
+                                <rect key="frame" x="40" y="398.5" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aK9-dk-x0P">
-                                <rect key="frame" x="0.0" y="489" width="414" height="373"/>
+                                <rect key="frame" x="0.0" y="437" width="414" height="425"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXy-re-Hq2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
@@ -118,7 +118,7 @@
         <!--Movies raiting-->
         <scene sceneID="Au3-Yg-d6I">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="EPv-yr-MOf" customClass="TableVC" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="EPv-yr-MOf" customClass="TableViewController" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sg3-QR-ttw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -186,7 +186,7 @@
         <!--Navigation Controller-->
         <scene sceneID="0wV-Ek-h3y">
             <objects>
-                <navigationController id="YBj-iv-kTe" customClass="NavigationController" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="YBj-iv-kTe" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xBr-jv-zWY">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="381" y="-313"/>
         </scene>
-        <!--My SplitVC-->
+        <!--My Split View Controller-->
         <scene sceneID="VAR-jL-ocU">
             <objects>
-                <splitViewController allowDoubleColumnStyle="YES" id="l6w-a2-BGs" customClass="MySplitVC" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController allowDoubleColumnStyle="YES" id="l6w-a2-BGs" customClass="MySplitViewController" customModule="SplitVC" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="YBj-iv-kTe" kind="relationship" relationship="masterViewController" id="yqL-fh-WC7"/>
                         <segue destination="D5e-IJ-WJT" kind="relationship" relationship="detailViewController" id="nrs-HG-wZj"/>
@@ -214,7 +214,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QF5-Bn-Jdv"/>
+        <segue reference="nrs-HG-wZj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

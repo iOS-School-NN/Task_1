@@ -31,5 +31,17 @@ class MovieTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func update(item: Item) {
+        titleLable.text = item.title
+        
+        if let price = item.price {
+            priceLable.text = String("\(round(price * 100) / 100) $")
+        } else {
+            priceLable.text = ""
+        }
+        
+        cellImage.image = UIImage(named: item.imageName)
+    }
+    
 }

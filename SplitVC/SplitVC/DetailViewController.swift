@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailVC: UIViewController {
+class DetailViewController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -16,40 +16,36 @@ class DetailVC: UIViewController {
     @IBOutlet weak var priceLable: UILabel!
     @IBOutlet weak var descriptionLable: UILabel!
     
-    var poster = TableVC.dataArr[0].imageName
-    var titleText = TableVC.dataArr[0].title
-    var rating = TableVC.dataArr[0].rating
-    var priceVal: Double? = TableVC.dataArr[0].price
-    var descriptionText = TableVC.dataArr[0].description
+    var item: Item?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageView.image = UIImage(named: poster)
-        titleLable.text = titleText
+        updateData()
+    }
+    
+    func updateData() {
+        guard let item = item else { return }
+        imageView.image = UIImage(named: item.imageName)
+        titleLable.text = item.title
         ratingLable.text = stars()
         
-        if let priceVal = priceVal {
+        if let priceVal = item.price {
             priceLable.text = "\(round(priceVal * 100) / 100) $"
         } else {
-            priceLable.isHidden = true
+            priceLable.text = ""
         }
         
-        descriptionLable.text = descriptionText
+        descriptionLable.text = item.description
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         imageView.layer.cornerRadius = imageView.bounds.height / 2
-        
-        if priceVal == nil {
-            scroll.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 40).isActive = true
-        }
     }
     
     private func stars() -> String {
-        let ratingInt = Int(rating)
+        guard let item = item else { return ""}
+        let ratingInt = Int(item.rating)
         var ratingStars = ""
         if ratingInt == 0 {return "☆☆☆☆☆"}
         if ratingInt == 5 {return "★★★★★"}
@@ -63,5 +59,10 @@ class DetailVC: UIViewController {
         }
         return ratingStars
     }
-    
+}
+
+extension DetailViewController: TableViewControllerDelegate {
+    func createData(item: Item) {
+        self.item = item
+    }
 }

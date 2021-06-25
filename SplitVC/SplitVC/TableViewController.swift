@@ -8,9 +8,15 @@
 import UIKit
 import Foundation
 
-class TableVC: UITableViewController {
+protocol TableViewControllerDelegate {
+    func createData(item: Item)
+}
+
+class TableViewController: UITableViewController {
     
-    public static let dataArr: [Item] = [
+    var delegate: TableViewControllerDelegate?
+    
+    let dataArr: [Item] = [
         Item(title: "Green Mile", imageName: "GreenMile", price: nil, rating: 3.3, description: "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift."),
         Item(title: "Shindlers List", imageName: "ShindlersList", price: 20.1, rating: 5.0, description: "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."),
         Item(title: "The Shawshank Redemption", imageName: "TheShawshankRedemption", price: 40.5331, rating: 2.2, description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."),
@@ -36,36 +42,22 @@ class TableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return TableVC.dataArr.count
+        return dataArr.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
-        
-        cell.titleLable.text = TableVC.dataArr[indexPath.row].title
-        
-        if let price = TableVC.dataArr[indexPath.row].price {
-            cell.priceLable.text = String("\(round(price * 100) / 100) $")
-        } else {
-            cell.priceLable.text = ""
-        }
-        cell.cellImage.image = UIImage(named: TableVC.dataArr[indexPath.row].imageName)
-
+        cell.update(item: dataArr[indexPath.row])
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail = delegate as! DetailViewController
         
-        let detail = self.storyboard?.instantiateViewController(identifier: "DetailVC") as! DetailVC
-        let currentItem = TableVC.dataArr[indexPath.row]
+        detail.createData(item: dataArr[indexPath.row])
+        detail.updateData()
         
-        detail.poster = currentItem.imageName
-        detail.titleText = currentItem.title
-        detail.rating = currentItem.rating
-        detail.priceVal = currentItem.price
-        detail.descriptionText = currentItem.description
-        
-        let nav = UINavigationController(rootViewController: detail)
+        guard let nav = detail.navigationController else { return }
         splitViewController?.showDetailViewController(nav, sender: nil)
     }
 
@@ -117,5 +109,4 @@ class TableVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

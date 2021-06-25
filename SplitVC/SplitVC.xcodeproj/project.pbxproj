@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		221289922671DEF400D2A29A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289912671DEF400D2A29A /* AppDelegate.swift */; };
 		221289942671DEF400D2A29A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289932671DEF400D2A29A /* SceneDelegate.swift */; };
-		221289962671DEF400D2A29A /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289952671DEF400D2A29A /* DetailVC.swift */; };
+		221289962671DEF400D2A29A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289952671DEF400D2A29A /* DetailViewController.swift */; };
 		221289992671DEF400D2A29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221289972671DEF400D2A29A /* Main.storyboard */; };
 		2212899B2671DEF700D2A29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2212899A2671DEF700D2A29A /* Assets.xcassets */; };
 		2212899E2671DEF700D2A29A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2212899C2671DEF700D2A29A /* LaunchScreen.storyboard */; };
 		221289A92671DEF700D2A29A /* SplitVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289A82671DEF700D2A29A /* SplitVCTests.swift */; };
 		221289B42671DEF700D2A29A /* SplitVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289B32671DEF700D2A29A /* SplitVCUITests.swift */; };
-		221289D02671E1ED00D2A29A /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289CF2671E1ED00D2A29A /* TableVC.swift */; };
+		221289D02671E1ED00D2A29A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289CF2671E1ED00D2A29A /* TableViewController.swift */; };
 		221289DD2671E38300D2A29A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289DC2671E38300D2A29A /* Model.swift */; };
 		221289E22671E80100D2A29A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221289E12671E80100D2A29A /* MovieTableViewCell.swift */; };
+		225D0FE62682627600B99E7A /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D0FE52682627600B99E7A /* MySplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		2212898E2671DEF400D2A29A /* SplitVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		221289912671DEF400D2A29A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		221289932671DEF400D2A29A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		221289952671DEF400D2A29A /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		221289952671DEF400D2A29A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		221289982671DEF400D2A29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2212899A2671DEF700D2A29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2212899D2671DEF700D2A29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,9 +53,10 @@
 		221289AF2671DEF700D2A29A /* SplitVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitVCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		221289B32671DEF700D2A29A /* SplitVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitVCUITests.swift; sourceTree = "<group>"; };
 		221289B52671DEF700D2A29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		221289CF2671E1ED00D2A29A /* TableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		221289CF2671E1ED00D2A29A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		221289DC2671E38300D2A29A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		221289E12671E80100D2A29A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		225D0FE52682627600B99E7A /* MySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +109,9 @@
 			children = (
 				221289912671DEF400D2A29A /* AppDelegate.swift */,
 				221289932671DEF400D2A29A /* SceneDelegate.swift */,
-				221289952671DEF400D2A29A /* DetailVC.swift */,
-				221289CF2671E1ED00D2A29A /* TableVC.swift */,
+				221289952671DEF400D2A29A /* DetailViewController.swift */,
+				225D0FE52682627600B99E7A /* MySplitViewController.swift */,
+				221289CF2671E1ED00D2A29A /* TableViewController.swift */,
 				221289E12671E80100D2A29A /* MovieTableViewCell.swift */,
 				221289DC2671E38300D2A29A /* Model.swift */,
 				221289972671DEF400D2A29A /* Main.storyboard */,
@@ -268,9 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				221289DD2671E38300D2A29A /* Model.swift in Sources */,
-				221289962671DEF400D2A29A /* DetailVC.swift in Sources */,
+				221289962671DEF400D2A29A /* DetailViewController.swift in Sources */,
+				225D0FE62682627600B99E7A /* MySplitViewController.swift in Sources */,
 				221289922671DEF400D2A29A /* AppDelegate.swift in Sources */,
-				221289D02671E1ED00D2A29A /* TableVC.swift in Sources */,
+				221289D02671E1ED00D2A29A /* TableViewController.swift in Sources */,
 				221289E22671E80100D2A29A /* MovieTableViewCell.swift in Sources */,
 				221289942671DEF400D2A29A /* SceneDelegate.swift in Sources */,
 			);
